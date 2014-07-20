@@ -61,6 +61,11 @@ public class ImageCache {
         }
         return sImageCache;
     }
+    
+    public Bitmap getBitmapFromCache(String cacheKey)
+    {
+    	 return mMemoryCache.get(cacheKey);
+    }
 
     public void queryCache(String cacheKey, ImageCacheListener listener, DownloadRequest downloadRequest) {
         if (cacheKey == null) {
